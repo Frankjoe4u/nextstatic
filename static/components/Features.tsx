@@ -41,7 +41,7 @@ export default function Features() {
   return (
     <section className="py-20 bg-white px-6">
       <div className="max-w-5xl mx-auto">
-        {/* Heading */}
+        
         <div className="mb-10">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-6">
             What is Static WordPress?
@@ -52,14 +52,14 @@ export default function Features() {
           </p>
         </div>
 
-        {/* Cards */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {features.map((f) => (
             <div
               key={f.title}
               className="p-8 rounded-2xl bg-gray-100 flex flex-col items-center text-center"
             >
-              {/* Icon box */}
+          
               <div
                 className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
                 style={{

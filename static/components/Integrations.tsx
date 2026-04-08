@@ -28,7 +28,7 @@ export default function Integrations() {
   return (
     <section className="py-20 bg-white px-4">
       <div className="max-w-5xl mx-auto">
-        {/* Heading */}
+        
         <div className="text-center mb-12">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-brand-teal mb-3">
             Integrations
@@ -43,7 +43,7 @@ export default function Integrations() {
           </p>
         </div>
 
-        {/* Logo grid */}
+       
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-4 gap-6">
           {plugins.map((p) => (
             <div

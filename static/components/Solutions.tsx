@@ -62,7 +62,7 @@ export default function Solutions() {
   return (
     <section className="py-20 px-4" style={{ backgroundColor: "#eeeef5" }}>
       <div className="max-w-5xl mx-auto">
-        {/* Heading row */}
+       
         <div className="flex items-start justify-between gap-6 mb-12">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-brand-navy leading-tight max-w-xs">
             Choose your solution
@@ -76,7 +76,7 @@ export default function Solutions() {
           </Link>
         </div>
 
-        {/* Cards */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {solutions.map((s) => (
             <div
@@ -87,7 +87,7 @@ export default function Solutions() {
               }
               style={s.dark ? { backgroundColor: "#1e1b3a" } : {}}
             >
-              {/* Tag pill */}
+              
               <div className="mb-5">
                 <span
                   className={
@@ -101,7 +101,7 @@ export default function Solutions() {
                 </span>
               </div>
 
-              {/* Title + subtitle */}
+             
               <h3 className="font-display text-2xl font-bold mb-3 text-center">
                 {s.title}
               </h3>
@@ -114,7 +114,7 @@ export default function Solutions() {
                 {s.subtitle}
               </p>
 
-              {/* CTA — full width, purple */}
+             
               <Link
                 href="#"
                 className="w-full inline-flex items-center justify-center px-5 py-3 rounded-lg text-sm font-bold mb-8 text-white transition-opacity hover:opacity-90"
@@ -123,7 +123,7 @@ export default function Solutions() {
                 {s.cta}
               </Link>
 
-              {/* What you get */}
+             
               <div className="mb-4">
                 <p
                   className="text-xs font-bold uppercase tracking-wide mb-3 text-center"
@@ -156,7 +156,7 @@ export default function Solutions() {
                 </div>
               </div>
 
-              {/* Perfect for */}
+              
               <div className="mb-6">
                 <p
                   className="text-xs font-bold uppercase tracking-wide mb-3 text-center"
@@ -189,7 +189,7 @@ export default function Solutions() {
                 </div>
               </div>
 
-              {/* Pricing */}
+             
               <div
                 className={
                   "mt-auto pt-5 border-t text-sm font-semibold " +

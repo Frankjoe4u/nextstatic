@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-[#0d0d1a] border-b border-white/10 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
+       
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <img
             src="https://clonestatics.vercel.app/logo/logo-dark.svg"
@@ -29,7 +29,7 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop nav */}
+      
         <nav className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <Link
@@ -42,7 +42,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
+      
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="#"
@@ -58,7 +58,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile — two hamburger icons side by side */}
+        
         <div className="md:hidden flex items-center gap-2">
           <button onClick={() => setOpen(!open)} aria-label="Toggle menu">
             <HamburgerIcon />
@@ -69,7 +69,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile dropdown */}
+     
       {open && (
         <div className="md:hidden bg-[#0d0d1a] border-t border-white/10 px-4 pb-4 pt-2 space-y-3">
           {navLinks.map((link) => (
