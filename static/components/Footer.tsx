@@ -1,83 +1,163 @@
-import Link from "next/link";
-
-const footerColumns = [
-  {
-    heading: "Company",
-    links: [
-      "Legal Disclosure",
-      "Terms of Service",
-      "VDP Program",
-      "Data Privacy",
-    ],
-  },
-  {
-    heading: "Resources",
-    links: ["Changelogs", "Case Studies", "Glossary", "Account"],
-  },
-  {
-    heading: "Static WordPress",
-    links: [
-      "WordPress to Static",
-      "Headless WordPress",
-      "Performance Boost",
-      "Security Benefits",
-    ],
-  },
-  {
-    heading: "Compare",
-    links: [
-      "WP2Static vs Simply Static",
-      "HardyPress vs Simply Static",
-      "Strattic vs Simply Static",
-      "All Comparisons",
-    ],
-  },
-];
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-light border-t border-brand-border px-4 pt-14 pb-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Logo */}
-        <div className="mb-10">
-          <img
-            src="https://clonestatics.vercel.app/logo/logo-dark.svg"
-            alt="Simply Static"
-            className="h-8 w-auto"
-          />
+    <footer
+      className="py-20 px-16 max-sm:py-16 max-sm:px-6"
+      style={{ backgroundColor: "#f0f0f8" }}
+    >
+      <div className="max-w-6xl mx-auto grid grid-cols-4 gap-10 md:grid-cols-2 max-sm:grid-cols-1 text-center">
+        <div>
+          <h4 className="text-base font-bold text-gray-900 mb-8">Company</h4>
+          <ul className="flex flex-col gap-6">
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Legal Disclosure
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                VDP Program
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Data Privacy
+              </a>
+            </li>
+          </ul>
         </div>
 
-        {/* Columns */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-12">
-          {footerColumns.map((col) => (
-            <div key={col.heading}>
-              <h4 className="text-xs font-bold uppercase tracking-widest text-brand-navy mb-4">
-                {col.heading}
-              </h4>
-              <ul className="space-y-2.5">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    <Link
-                      href="#"
-                      className="text-sm text-slate-500 hover:text-brand-teal transition-colors"
-                    >
-                      {link}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div>
+          <h4 className="text-base font-bold text-gray-900 mb-8">Resources</h4>
+          <ul className="flex flex-col gap-6">
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Changelogs
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Case Studies
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Glossary
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Account
+              </a>
+            </li>
+          </ul>
         </div>
 
-        {/* Bottom bar */}
-        <div className="pt-6 border-t border-brand-border flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-slate-400">
-            © {new Date().getFullYear()} Simply Static. All rights reserved.
-          </p>
-          <p className="text-xs text-slate-400">
-            Built with ❤️ for the WordPress community
-          </p>
+        <div>
+          <h4 className="text-base font-bold text-gray-900 mb-8">
+            Static WordPress
+          </h4>
+          <ul className="flex flex-col gap-6">
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                WordPress to Static
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Headless WordPress
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Performance Boost
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Security Benefits
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="text-base font-bold text-gray-900 mb-8">Compare</h4>
+          <ul className="flex flex-col gap-6">
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                WP2Static vs Simply Static
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                HardyPress vs Simply Static
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                Strattic vs Simply Static
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="text-sm text-gray-700 underline underline-offset-2 hover:text-violet-700 transition-colors"
+              >
+                All Comparisons
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>

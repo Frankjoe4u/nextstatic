@@ -2,25 +2,28 @@ import Link from "next/link";
 
 export default function CtaSection() {
   return (
-    <section className="py-20 bg-brand-navy px-4">
-      <div className="max-w-3xl mx-auto text-center">
-        <h2 className="font-display text-3xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+    <section
+      className="py-20 px-8 md:px-16"
+      style={{ backgroundColor: "#5b21b6" }}
+    >
+      <div className="max-w-4xl">
+        <h2 className="font-display text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
           Ready to Make WordPress Fast,
-          <br className="hidden sm:block" /> Secure, and Maintenance-Free?
+          <br /> Secure, and Maintenance-Free?
         </h2>
-        <p className="text-slate-400 text-base mb-10">
+        <p className="text-white/80 text-base mb-10">
           Choose the solution that fits your needs.
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="flex flex-col sm:flex-row items-start gap-4">
           <Link
             href="#"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white text-brand-navy text-sm font-bold hover:bg-slate-100 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-black text-white text-sm font-bold hover:bg-neutral-800 transition-colors"
           >
             Simply Static Pro
           </Link>
           <Link
             href="#"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-brand-teal text-white text-sm font-bold hover:bg-brand-tealDark transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-black text-white text-sm font-bold hover:bg-neutral-800 transition-colors"
           >
             Simply Static Studio
           </Link>

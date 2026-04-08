@@ -1,4 +1,6 @@
-const BASE = "logo";
+import { FaCode, FaUsers, FaStar } from "react-icons/fa";
+
+const BASE = "/logo";
 
 const logos = [
   { src: `${BASE}/microsoft-copy.webp`, alt: "Microsoft" },
@@ -14,16 +16,19 @@ const logos = [
 const audiences = [
   {
     title: "Developers",
+    icon: <FaCode size={20} />,
     description:
       "Fully automate Static WordPress and run an ultra-secure and fast blog or website from your local computer. You can even use WP-CLI to automate it.",
   },
   {
     title: "Agencies",
+    icon: <FaUsers size={20} />,
     description:
       "Deliver outstanding websites to your clients while ensuring that they are performant, secure, and don't need permanent maintenance.",
   },
   {
     title: "Content Creators",
+    icon: <FaStar size={20} />,
     description:
       "Publish your next article or newsletter issue from anywhere in the world, knowing it will be delivered to your visitors in milliseconds.",
   },
@@ -40,44 +45,45 @@ export default function AudienceStats() {
   return (
     <section className="py-20 bg-white px-4">
       <div className="max-w-5xl mx-auto">
-        {/* Heading */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
-          <div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-navy mb-2">
-              Trusted by developers, agencies,
-              <br className="hidden md:block" /> and businesses
-            </h2>
-            <p className="text-slate-500 text-base">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-14">
+          <h2 className="font-display text-4xl md:text-5xl font-extrabold text-brand-navy leading-tight max-w-sm">
+            Trusted by developers, agencies, and businesses
+          </h2>
+          <div className="flex flex-col items-start md:items-end gap-5 md:max-w-xs">
+            <p className="text-slate-500 text-base leading-relaxed md:text-right">
               Trusted by over 40,000 developers, agencies, and businesses
-              worldwide – from small businesses to big enterprises.
+              worldwide from small businesses to big enterprises.
             </p>
-          </div>
-          <a
-            href="#"
-            className="text-brand-teal text-sm font-semibold hover:underline whitespace-nowrap"
-          >
-            Compare Studio vs Pro →
-          </a>
-        </div>
-
-        {/* Audience cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-14">
-          {audiences.map((a) => (
-            <div
-              key={a.title}
-              className="p-6 rounded-2xl border border-brand-border bg-brand-light hover:border-brand-teal transition-colors"
+            <a
+              href="#"
+              className="inline-flex items-center px-5 py-3 rounded-md bg-[#5b21b6] text-white text-sm font-bold hover:bg-[#4c1d95] transition-colors whitespace-nowrap"
             >
-              <h3 className="font-display text-lg font-bold text-brand-navy mb-2">
-                {a.title}
-              </h3>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                {a.description}
-              </p>
-            </div>
-          ))}
+              Compare Studio vs Pro →
+            </a>
+          </div>
         </div>
 
-        {/* Stats bar */}
+        <div className="bg-[#ede9fe] rounded-3xl p-8 mb-14">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {audiences.map((a) => (
+              <div
+                key={a.title}
+                className="flex flex-col items-start md:items-center md:text-center"
+              >
+                <div className="w-12 h-12 rounded-xl bg-[#5b21b6] flex items-center justify-center text-white mb-4">
+                  {a.icon}
+                </div>
+                <h3 className="font-display text-lg font-bold text-brand-navy mb-2">
+                  {a.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {a.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-14 py-8 border-y border-brand-border">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
@@ -89,14 +95,13 @@ export default function AudienceStats() {
           ))}
         </div>
 
-        {/* Logos grid */}
         <div className="flex flex-wrap justify-center items-center gap-8">
           {logos.map((logo) => (
             <img
               key={logo.alt}
               src={logo.src}
               alt={logo.alt}
-              className="h-7 md:h-9 w-auto object-contain  transition-all duration-300"
+              className="h-7 md:h-9 w-auto object-contain hover:grayscale-0 transition-all duration-300"
             />
           ))}
         </div>

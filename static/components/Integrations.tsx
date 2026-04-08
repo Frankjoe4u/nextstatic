@@ -48,7 +48,7 @@ export default function Integrations() {
           {plugins.map((p) => (
             <div
               key={p.alt}
-              className="flex items-center justify-center p-5 rounded-xl border border-brand-border bg-brand-light hover:border-brand-teal hover:shadow-sm transition-all duration-300 group"
+              className="flex items-center justify-center p-5 rounded-xl border  bg-brand-light hover:border-brand-teal hover:shadow-sm transition-all duration-300 group"
             >
               <img
                 src={p.src}

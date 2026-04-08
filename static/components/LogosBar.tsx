@@ -16,7 +16,7 @@ export default function LogosBar() {
   const secondRow = logos.slice(5);
 
   return (
-    <section className="py-12 bg-white border-y border-brand-border">
+    <section className="py-12 bg-white border-y ">
       <div className="max-w-5xl mx-auto px-4 text-center mb-10">
         <p className="text-slate-600 text-base leading-relaxed">
           With over{" "}

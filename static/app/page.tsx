@@ -13,16 +13,19 @@ import Testimonials from "@/components/Testimonials";
 export default function Home() {
   return (
     <main>
-          <Navbar />
-        <Hero />
-          <LogosBar />
-          <Features />
-          <Solutions />
-          <AudienceStats />
-          <Testimonials />
-          <Integrations />
-          <CtaSection />
-          <Footer />
+      <Navbar />
+      <Hero />
+      <div className="relative z-10 pt-44">
+        <LogosBar />
+      </div>
+
+      <Features />
+      <Solutions />
+      <AudienceStats />
+      <Testimonials />
+      <Integrations />
+      <CtaSection />
+      <Footer />
     </main>
   );
 }
